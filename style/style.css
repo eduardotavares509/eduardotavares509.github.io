@@ -47,6 +47,14 @@
   cursor: none;
 }
 
+::-webkit-scrollbar {
+  background-color: rgba(202, 202, 202, 0.26);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(68, 68, 68, 0.507);
+  border-radius: 30px;
+}
+
 #load {
   background-color: #fff;
   position: absolute;
