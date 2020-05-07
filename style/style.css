@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "inversionz";
+  src: url(../font/inversionz-webfont.woff);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media (max-width: 800px) {
+  .card {
+    width: 100%;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .social a {
+    margin: 10px;
+  }
+}
+
+@media (min-width: 800px) {
+  .card {
+    width: 30%;
+  }
+
+  .social a {
+    padding: 10px;
+    margin: 5px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  cursor: none;
+}
+
+body {
+  padding: 20px;
+}
+
+.cursor {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  z-index: 2;
+}
+
+.link-grow {
+  transform: scale(2);
+  background-color: #000;
+}
+
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Merriweather", serif;
+}
+
+header {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  height: 10vh;
+  z-index: 4;
+}
+
+header > div {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1 {
+  font-family: inversionz;
+  font-size: 3em;
+}
+
+.logo a {
+  color: #000;
+  text-decoration: none;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.social a {
+  width: 25px;
+}
+
+.hovered-ico {
+  filter: invert(1);
+}
+
+.social img {
+  width: 100%;
+}
+
+h2 {
+  margin-top: 170px;
+  margin-bottom: 110px;
+  font-weight: normal;
+  font-size: 2.5em;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.card {
+  margin-bottom: 40px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.452);
+  transition: all ease-in-out 250ms;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.24);
+}
+
+.card a {
+  color: #000;
+  text-decoration: none;
+}
+
+.card-image img {
+  width: 100%;
+}
+
+.card-text {
+  padding: 20px;
+}
+
+.card-text h3 {
+  margin-bottom: 10px;
+}
+
+.card-text p {
+  font-family: "Merriweather", serif;
+}
+
+footer {
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+  align-items: center;
+}
