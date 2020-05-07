@@ -4,6 +4,7 @@ const header = document.querySelector("header");
 const main = document.querySelector("main");
 const titulo = document.querySelector("main>h2");
 var cont = window.localStorage.getItem("cont");
+var body = document.querySelector("body");
 
 if (cont != null) {
   cont = 4;
@@ -43,5 +44,6 @@ loadText.addEventListener("animationend", (e) => {
 load.addEventListener("animationend", (e) => {
   if (e.animationName == "fadeOut") {
     load.style.display = "none";
+    body.style.overflow = "visible";
   }
 });
