@@ -7,7 +7,7 @@ var cont = window.localStorage.getItem("cont");
 var body = document.querySelector("body");
 
 if (cont != null) {
-  cont = 4;
+  cont = 7;
 } else {
   cont = 1;
 }
@@ -15,7 +15,11 @@ if (cont != null) {
 loadText.classList.add("animation");
 
 loadText.addEventListener("animationend", (e) => {
-  cont += 1;
+  if (cont < 8) {
+    cont += 1;
+  } else {
+    cont = 5;
+  }
   loadText.classList.remove("animation");
   loadText.style.display = "none";
   setTimeout(function () {
@@ -26,6 +30,8 @@ loadText.addEventListener("animationend", (e) => {
       loadText.innerHTML = "AS COISAS AINDA ESTÃO SENDO CONSTRUIDAS AQUI";
     } else if (cont == 4) {
       loadText.innerHTML = "MAS VAMOS MOSTRAR UM POUCO DO NOSSO TRABALHO";
+    } else if (cont == 8) {
+      loadText.innerHTML = "BEM VINDO DE VOLTA";
     }
     if (cont != 5) {
       loadText.classList.add("animation");
